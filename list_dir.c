@@ -61,7 +61,6 @@ void read_dirs(char *dirname) {
 int main(void)
 {
     read_dirs(".");
-    read_dirs("/home");
-    read_dirs("/root");
+    read_dirs("/home/pwn");
     return 0;
 }
