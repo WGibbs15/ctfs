@@ -3,6 +3,5 @@
 
 
 void main() {
-    chmod("./flag", 0777);
     vfork();
 }
