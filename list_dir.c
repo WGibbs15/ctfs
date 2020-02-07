@@ -51,9 +51,11 @@ int main(void)
         while ((dir = readdir(d)) != NULL)
         {
             printf("%s\n", dir->d_name);
-            print_file_permissions(dir->d_name);
-        }
+            if(strcmp(dir->d_name, "flag") == 0) {
+                print_file_permissions(dir->d_name);
+            }
         closedir(d);
+        }
     }
     return(0);
 }
