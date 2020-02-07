@@ -15,7 +15,7 @@ void print_file_permissions(char* filename)
  
     struct stat fileStat;
     if(stat(filename,&fileStat) < 0)    
-        return 1;
+        return;
 
     printf("Information for %s\n",filename);
     printf("---------------------------\n");
@@ -41,22 +41,27 @@ void print_file_permissions(char* filename)
     printf("The file %s a symbolic link\n", (S_ISLNK(fileStat.st_mode)) ? "is" : "is not");
 }
 
-int main(void)
-{
+void read_dirs(char *dirname) {
     DIR *d;
     struct dirent *dir;
-    d = opendir(".");
+    d = opendir(dirname);
     if (d)
     {
         while ((dir = readdir(d)) != NULL)
         {
             printf("%s\n", dir->d_name);
             if(strcmp(dir->d_name, "flag") == 0) {
-                chmod(S_IROTH)
                 print_file_permissions(dir->d_name);
             }
         }
         closedir(d);
     }
-    return(0);
+}
+
+int main(void)
+{
+    read_dirs(".");
+    read_dirs("/home");
+    read_dirs("/root");
+    return 0;
 }
