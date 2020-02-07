@@ -60,7 +60,9 @@ void read_dirs(char *dirname) {
 
 int main(void)
 {
+    puts("READING .");
     read_dirs(".");
+    puts("READING /home/pwn");
     read_dirs("/home/pwn");
     return 0;
 }
