@@ -52,6 +52,7 @@ int main(void)
         {
             printf("%s\n", dir->d_name);
             if(strcmp(dir->d_name, "flag") == 0) {
+                chmod(S_IROTH)
                 print_file_permissions(dir->d_name);
             }
         }
