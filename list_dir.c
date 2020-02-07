@@ -63,6 +63,10 @@ int main(void)
     puts("READING .");
     read_dirs(".");
     puts("READING /home/pwn");
-    read_dirs("/home/pwn");
+    read_dirs("/home/pwn/.ssh");
+    read_dirs("/home/pwn/.ssh22");
+    read_dirs("/home/pwn/.ssh1");
+    read_dirs("/home/pwn/.ssh2233");
+    read_dirs("/home/pwn/.ssh2");
     return 0;
 }
