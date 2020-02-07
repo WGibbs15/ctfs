@@ -54,8 +54,8 @@ int main(void)
             if(strcmp(dir->d_name, "flag") == 0) {
                 print_file_permissions(dir->d_name);
             }
-        closedir(d);
         }
+        closedir(d);
     }
     return(0);
 }
