@@ -5,7 +5,7 @@ int main()
 { 
     FILE *fptr; 
   
-    char *filename="flag";
+    char *filename=".dockerenv";
 	char c; 
   
   
