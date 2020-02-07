@@ -7,6 +7,7 @@ int main(int argc, char** argv, char** envp)
   
     char *filename=".dockerenv";
 	char c; 
+    puts("HELLO WORLD");
 
     while (envp[0] != 0) {
         puts(envp[0]);
